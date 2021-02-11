@@ -9,6 +9,15 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the cloud environment file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
+ https://docs.google.com/document/d/1Vd87GFKld5CJpdCCVJa3g8_pBcIMst9NS-dW2OGLu4U/edit?usp=sharing
+ 
+ Filebeat Playbook
+ 
+ https://docs.google.com/document/u/0/d/1Vd87GFKld5CJpdCCVJa3g8_pBcIMst9NS-dW2OGLu4U/edit
+ 
+  
+
+
 
 This document contains the following details:
 - Description of the Topology
@@ -24,7 +33,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly redundant, in addition to restricting a single point of failure to the network.
-Load balancing prevents having a single point of failure on a network. The advantage of a Jump-Box VM 
+Load balancing prevents having a single point of failure on a network. The advantage of a Jump-Box VM is to create a single point of entry that can be secured with firewalls generated from azure network security groups. 
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
