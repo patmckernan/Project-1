@@ -61,7 +61,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump-Box VM machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+
 - My host machine IP address: 172.14.134.91
 
 Machines within the network can only be accessed by accessing the DVWA container throuh Jump-Box VM. 
@@ -87,7 +87,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The main advantage of being able to automate the configuration of machines with Ansible is that it reduces the amount of error when configuring multile machines at one time. Additionally, it simplifies the deployment of software and firewall systems for client machines. 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+
 - Install docker
 - Download image
 - Configure ansible container
@@ -120,11 +120,11 @@ These Beats allow us to collect the following information from each machine:
 
 Filebeat monitors the log files of choosen systems. It then forwards this data to Logstash, or Elasticsearch. This data is able to be viewed via Kibana. Kibana is able to display information in the below screenshot. 
 
-<Insert Kibana screenshot here with Filebeat information>
+![Image of Filebeat status](https://github.com/patmckernan/Project-1/blob/main/images/Filebeat.png)
   
 Metribeat is is a lightweight shipper that sends data on the status of system services. When metricbeat does not receive these metrics it will send an error event from the host system. 
 
-<Insert Metricbeat screenshot here>
+![Image of Metricbeat status](https://github.com/patmckernan/Project-1/blob/main/images/Metricbeat.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
