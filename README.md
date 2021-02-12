@@ -70,11 +70,6 @@ The only machine that can access is Elk-1 server is Jump-Box VM through DVWA con
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
 
 | Name        	| Publicly Accessible 	| Allowed IP Addresses    	|
 |-------------	|---------------------	|-------------------------	|
@@ -123,13 +118,23 @@ We have installed both Filebeat, and Metricbeat on these machines.
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
+Filebeat monitors the log files of choosen systems. It then forwards this data to Logstash, or Elasticsearch. This data is able to be viewed via Kibana. Kibana is able to display information in the below screenshot. 
+
+<Insert Kibana screenshot here with Filebeat information>
+  
+Metribeat is is a lightweight shipper that sends data on the status of system services. When metricbeat does not receive these metrics it will send an error event from the host system. 
+
+<Insert Metricbeat screenshot here>
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
+curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml
+
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat-playbook.yml file to /etc/ansible/roles.
+- Update the filebeat-config.yml file to include ELK-1 private IP 10.1.0.4 under hosts in Elasticsearch output, and Kibana host.
+- Run ansible-playbook filebeat-playbook.yml, and navigate to Kibana (http://104.214.89.46:5601/app/kibana) via Elk-1 public IP 104.214.89.46 to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
