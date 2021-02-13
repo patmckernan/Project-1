@@ -2,7 +2,6 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
 
 ![Image of Network Diagram](https://github.com/patmckernan/Project-1/blob/main/images/Network-Diagram.png)
 
@@ -32,7 +31,6 @@ Load balancing prevents having a single point of failure on a network.
 
 The advantage of a Jump-Box VM is to create a single point of entry that can be secured with firewalls generated from azure network security groups. Load balancing protects against DoS attacks, and provide redundancy if one server were to become offline. 
 
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the actual machines and system logs.
 - _TODO: What does Filebeat watch for?
@@ -41,7 +39,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+[Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) 
 
 | Name        	| Function         	| IP Address 	| Operating System 	|
 |-------------	|------------------	|------------	|------------------	|
@@ -60,6 +58,7 @@ Only the Jump-Box VM machine can accept connections from the Internet. Access to
 - My host machine IP address: 172.14.134.91
 
 Machines within the network can only be accessed by accessing the DVWA container throuh Jump-Box VM. 
+
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 The only machine that can access is Elk-1 server is Jump-Box VM through DVWA container through a peering connection with origin IP 10.0.0.4.
 
