@@ -138,7 +138,7 @@ The following commands are instructions on how to download, install, update the 
     sudo docker start jolly_hertz                                 #My container was named jolly_hertz
     sudo docker attach jolly_hertz
     
-  
+  ![Image of Docker](https://github.com/patmckernan/Project-1/blob/main/images/Docker.png)
     
  - Edit the Config and Hosts File
     nano /etc/ansible/hosts
