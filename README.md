@@ -147,7 +147,8 @@ Edit the Config and Hosts File
     
   - Uncomment the [webservers] header
   - Under the webservers header add the internal IP addresses of the VM's.
-     [webservers]                                                                                                                                                       10.0.0.5 ansible_python_interpreter=/usr/bin/python3                                                                                                               10.0.0.6 ansible_python_interpreter=/usr/bin/python3                                                                                                               10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+ 
+  ![Image of Ansible Hosts](https://github.com/patmckernan/Project-1/blob/main/images/Ansible%20hosts.png)
      
   - nano /etc/ansible/ansible.cfg
      - root@fb2552ff5c72:/# nano /etc/ansible/ansible.cfg
