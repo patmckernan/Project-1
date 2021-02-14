@@ -149,8 +149,8 @@ Edit the Config and Hosts File
   - Under the webservers header add the internal IP addresses of the VM's.
      [webservers]                                                                                                                                                       10.0.0.5 ansible_python_interpreter=/usr/bin/python3                                                                                                               10.0.0.6 ansible_python_interpreter=/usr/bin/python3                                                                                                               10.0.0.7 ansible_python_interpreter=/usr/bin/python3
      
-  nano /etc/ansible/ansible.cfg
-  - root@fb2552ff5c72:/# nano /etc/ansible/ansible.cfg
+  - nano /etc/ansible/ansible.cfg
+     - root@fb2552ff5c72:/# nano /etc/ansible/ansible.cfg
       
   scroll to line 106 and change remote user to azdmin (my VM username.) Save and exit.
   - remote_user = azdmin
