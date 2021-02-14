@@ -158,7 +158,7 @@ Download and Configure the container
  
  - Created a playbook called ansible_config.yml
   
-  ![Image of Ansible_config.yml playbook] (https://github.com/patmckernan/Project-1/blob/main/images/Ansible_config.yml.png)                                                                                                                                                                                                  
+  ![Image of Ansible_config.yml playbook](https://github.com/patmckernan/Project-1/blob/main/images/Ansible_config.yml.png)                                                                                                                                                                                                  
     
 - Run the playbook once the editing is complete.
     
