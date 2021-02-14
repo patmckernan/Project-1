@@ -111,7 +111,7 @@ Filebeat monitors the log files of choosen systems. It then forwards this data t
   
 Metribeat is is a lightweight shipper that sends data on the status of system services. When metricbeat does not receive these metrics it will send an error event from the host system. 
 
-![Image of Metricbeat status](https://github.com/patmckernan/Project-1/blob/main/images/Metricbeat.png)
+
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
