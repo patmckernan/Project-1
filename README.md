@@ -33,13 +33,12 @@ The advantage of a Jump-Box VM is to create a single point of entry that can be 
 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the actual machines and system logs.
-- _TODO: What does Filebeat watch for?
+
 - Filebeat enables the organization of log files to be generated and sent to Logstash, Kibana, and Elasticsearch. 
 
-- _TODO: What does Metricbeat record?_
+- Metricbeat periodically collects meterics from the system services and operating system on a machine. For example Metricbeat will collect services such as Apache, MongoDB, MySQL, and PostgreSQL.
 
-The configuration details of each machine may be found below.
-[Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) 
+The configuration details of each machine may be found below. 
 
 | Name        	| Function         	| IP Address 	| Operating System 	|
 |-------------	|------------------	|------------	|------------------	|
@@ -59,8 +58,7 @@ Only the Jump-Box VM machine can accept connections from the Internet. Access to
 
 Machines within the network can only be accessed by accessing the DVWA container throuh Jump-Box VM. 
 
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-The only machine that can access is Elk-1 server is Jump-Box VM through DVWA container through a peering connection with origin IP 10.0.0.4.
+- The only machine that can access is Elk-1 server is Jump-Box VM through DVWA container through a peering connection with origin IP 10.0.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -76,9 +74,8 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
 
-The main advantage of being able to automate the configuration of machines with Ansible is that it reduces the amount of error when configuring multile machines at one time. Additionally, it simplifies the deployment of software and firewall systems for client machines. 
+The benefit of automating the configuration of machines with Ansible is that it reduces the amount of error when configuring multile machines at one time manually. Additionally, it simplifies the deployment of software, firewall systems, and available ports for client machines. 
 
 The playbook implements the following tasks:
 
@@ -90,7 +87,6 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
 ![Image of Elk docker status](https://github.com/patmckernan/Project-1/blob/main/images/Elk%20docker%20status.png)
 
@@ -98,19 +94,16 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
 
 - Web-1 VM 10.0.0.5
 - Web-2 VM 10.0.0.6
 - Web-3 VM 10.0.0.7
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
 
 We have installed both Filebeat, and Metricbeat on these machines. 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 Filebeat monitors the log files of choosen systems. It then forwards this data to Logstash, or Elasticsearch. This data is able to be viewed via Kibana. Kibana is able to display information in the below screenshot. 
 
