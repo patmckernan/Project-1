@@ -140,9 +140,10 @@ The following commands are instructions on how to download, install, update the 
     
   ![Image of Docker](https://github.com/patmckernan/Project-1/blob/main/images/Docker.png)
     
- - Edit the Config and Hosts File
-    nano /etc/ansible/hosts
-    root@fb2552ff5c72:~# nano /etc/ansible/hosts
+Edit the Config and Hosts File
+    
+  - nano /etc/ansible/hosts
+    - root@fb2552ff5c72:~# nano /etc/ansible/hosts
     
   - Uncomment the [webservers] header
   - Under the webservers header add the internal IP addresses of the VM's.
