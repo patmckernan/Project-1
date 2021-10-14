@@ -56,7 +56,7 @@ Only the Jump-Box VM machine can accept connections from the Internet. Access to
 
 - My host machine IP address: 172.14.134.91
 
-Machines within the network can only be accessed by accessing the DVWA container throuh Jump-Box VM. 
+Machines within the network can only be accessed by accessing the DVWA container through Jump-Box VM. 
 
 - The only machine that can access is Elk-1 server is Jump-Box VM through DVWA container through a peering connection with origin IP 10.0.0.4.
 
